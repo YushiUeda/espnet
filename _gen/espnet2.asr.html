@@ -230,7 +230,7 @@
 <span id="id2"></span><h2>espnet2.asr.ctc<a class="headerlink" href="#espnet2-asr-ctc" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="module-espnet2.asr.ctc"></span><dl class="class">
 <dt id="espnet2.asr.ctc.CTC">
-<em class="property">class </em><code class="sig-prename descclassname">espnet2.asr.ctc.</code><code class="sig-name descname">CTC</code><span class="sig-paren">(</span><em class="sig-param">odim: int</em>, <em class="sig-param">encoder_output_size: int</em>, <em class="sig-param">dropout_rate: float = 0.0</em>, <em class="sig-param">ctc_type: str = 'builtin'</em>, <em class="sig-param">reduce: bool = True</em>, <em class="sig-param">ignore_nan_grad: bool = True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/espnet2/asr/ctc.html#CTC"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#espnet2.asr.ctc.CTC" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">espnet2.asr.ctc.</code><code class="sig-name descname">CTC</code><span class="sig-paren">(</span><em class="sig-param">odim: int</em>, <em class="sig-param">encoder_output_size: int</em>, <em class="sig-param">dropout_rate: float = 0.0</em>, <em class="sig-param">ctc_type: str = 'builtin'</em>, <em class="sig-param">reduce: bool = True</em>, <em class="sig-param">ignore_nan_grad: bool = None</em>, <em class="sig-param">zero_infinity: bool = True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/espnet2/asr/ctc.html#CTC"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#espnet2.asr.ctc.CTC" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
 <p>CTC module.</p>
 <dl class="field-list simple">
@@ -241,6 +241,8 @@
 <li><p><strong>dropout_rate</strong> – dropout rate (0.0 ~ 1.0)</p></li>
 <li><p><strong>ctc_type</strong> – builtin or warpctc</p></li>
 <li><p><strong>reduce</strong> – reduce the CTC loss into a scalar</p></li>
+<li><p><strong>ignore_nan_grad</strong> – Same as zero_infinity (keeping for backward compatiblity)</p></li>
+<li><p><strong>zero_infinity</strong> – Whether to zero infinite losses and the associated gradients.</p></li>
 </ul>
 </dd>
 </dl>
